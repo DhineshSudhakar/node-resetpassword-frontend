@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:4000/" });
+// const baseURL = "http://localhost:4000/"
+const baseURL = "https://reset-password-backend-node.herokuapp.com/";
+
+const API = axios.create({ baseURL });
 
 // API.interceptors.request.use((req) => {
 //   if (localStorage.getItem("profile")) {

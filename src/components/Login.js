@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { loginAction } from "../api";
 
 import "./main.css";
@@ -8,7 +8,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   let [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     const data = {
@@ -21,7 +20,7 @@ function Login() {
       console.log(typeof response.status);
       if (response.status === 200 || response.status > 200) {
         setIsLoggedIn(true);
-        console.log(isLoggedIn);
+        // console.log(isLoggedIn);
       }
     } catch (error) {
       console.log(error);
